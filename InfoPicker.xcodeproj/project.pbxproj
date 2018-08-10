@@ -15,6 +15,8 @@
 		D78C9B07211D67E7004A7D68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C9B06211D67E7004A7D68 /* main.m */; };
 		D78C9B11211D67E7004A7D68 /* InfoPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C9B10211D67E7004A7D68 /* InfoPickerTests.m */; };
 		D78C9B1C211D67E7004A7D68 /* InfoPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C9B1B211D67E7004A7D68 /* InfoPickerUITests.m */; };
+		D78C9B2C211D689F004A7D68 /* InfoPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C9B2B211D689F004A7D68 /* InfoPickerView.m */; };
+		D78C9B30211D6E02004A7D68 /* GlobalFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D78C9B2F211D6E02004A7D68 /* GlobalFunction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		D78C9B17211D67E7004A7D68 /* InfoPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfoPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78C9B1B211D67E7004A7D68 /* InfoPickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoPickerUITests.m; sourceTree = "<group>"; };
 		D78C9B1D211D67E7004A7D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D78C9B2A211D689F004A7D68 /* InfoPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPickerView.h; sourceTree = "<group>"; };
+		D78C9B2B211D689F004A7D68 /* InfoPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPickerView.m; sourceTree = "<group>"; };
+		D78C9B2E211D6E02004A7D68 /* GlobalFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalFunction.h; sourceTree = "<group>"; };
+		D78C9B2F211D6E02004A7D68 /* GlobalFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalFunction.m; sourceTree = "<group>"; };
+		D78C9B31211D6EC7004A7D68 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,8 @@
 		D78C9AF6211D67E4004A7D68 /* InfoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				D78C9B2D211D6DEB004A7D68 /* Global */,
+				D78C9B29211D683C004A7D68 /* InfoPickerView */,
 				D78C9AF7211D67E4004A7D68 /* AppDelegate.h */,
 				D78C9AF8211D67E4004A7D68 /* AppDelegate.m */,
 				D78C9AFA211D67E4004A7D68 /* ViewController.h */,
@@ -109,6 +118,7 @@
 				D78C9B00211D67E7004A7D68 /* Assets.xcassets */,
 				D78C9B02211D67E7004A7D68 /* LaunchScreen.storyboard */,
 				D78C9B05211D67E7004A7D68 /* Info.plist */,
+				D78C9B31211D6EC7004A7D68 /* Prefix.pch */,
 				D78C9B06211D67E7004A7D68 /* main.m */,
 			);
 			path = InfoPicker;
@@ -130,6 +140,24 @@
 				D78C9B1D211D67E7004A7D68 /* Info.plist */,
 			);
 			path = InfoPickerUITests;
+			sourceTree = "<group>";
+		};
+		D78C9B29211D683C004A7D68 /* InfoPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				D78C9B2A211D689F004A7D68 /* InfoPickerView.h */,
+				D78C9B2B211D689F004A7D68 /* InfoPickerView.m */,
+			);
+			path = InfoPickerView;
+			sourceTree = "<group>";
+		};
+		D78C9B2D211D6DEB004A7D68 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				D78C9B2E211D6E02004A7D68 /* GlobalFunction.h */,
+				D78C9B2F211D6E02004A7D68 /* GlobalFunction.m */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +293,8 @@
 				D78C9AFC211D67E4004A7D68 /* ViewController.m in Sources */,
 				D78C9B07211D67E7004A7D68 /* main.m in Sources */,
 				D78C9AF9211D67E4004A7D68 /* AppDelegate.m in Sources */,
+				D78C9B2C211D689F004A7D68 /* InfoPickerView.m in Sources */,
+				D78C9B30211D6E02004A7D68 /* GlobalFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T6M24N5BR;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/InfoPicker/Prefix.pch";
 				INFOPLIST_FILE = InfoPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T6M24N5BR;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/InfoPicker/Prefix.pch";
 				INFOPLIST_FILE = InfoPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
